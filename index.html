@@ -122,9 +122,28 @@
 
         /* --- 4. 沉浸大图 --- */
         .immersive { position: relative; height: 70vh; margin: 60px 0; border-radius: 0; overflow: hidden; }
-        .img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(76, 29, 149, 0.6), transparent); display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding-bottom: 80px; }
-        .img-overlay h2 { color: #fff; font-size: 2.5rem; text-align: center; padding: 0 20px; text-shadow: 0 0 20px #a855f7; }
-
+        /* .img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(76, 29, 149, 0.6), transparent); display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding-bottom: 80px; } */
+        /* .img-overlay h2 { color: #fff; font-size: 2.5rem; text-align: center; padding: 0 20px; text-shadow: 0 0 20px #a855f7;line-height: 1.2; /* 新增：统一行高，消除换行后的间距错位 */ 
+        .img-overlay { 
+  position: absolute; 
+  inset: 0; 
+  background: linear-gradient(to top, rgba(76, 29, 149, 0.6), transparent); 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-end; 
+  align-items: center; /* 保证h2整体在容器中居中 */
+  padding-bottom: 80px; 
+}
+.img-overlay h2 { 
+  color: #fff; 
+  font-size: 2.5rem; 
+  text-align: left; /* 让两行文字的「左侧对齐」（解决错位核心） */
+  padding: 0 20px; 
+  text-shadow: 0 0 20px #a855f7; 
+  line-height: 1.2; /* 统一行高 */
+  max-width: 300px; /* 限制h2宽度（避免文字太宽），可根据你的文字长度微调 */
+  margin: 0; /* 清除h2默认的上下边距 */
+}
         /* --- 5. 贺卡样式 (重点修改部分) --- */
         .letter-box {
             /* 纸张底色 + 浅紫色波点纹理 */
@@ -210,7 +229,7 @@
 
     <nav>
         <div class="nav-logo">LJQ 💜 CF</div>
-        <div style="font-size: 1.2rem;">❄️</div>
+        <div style="font-size: 1.2rem;">🦔🦔🦔</div>
     </nav>
 
     <!-- Hero -->
@@ -272,7 +291,7 @@
     <section class="section-padding">
         <div class="story-row reveal">
             <div class="story-img"><img src="15t1.jpg" alt="Story 1"></div>
-            <div class="story-text"><h3>💜 关于偏爱</h3><p>圣诞老人把礼物放在袜子里，而我把你送我的小熊放在这个紫色的网页里。小熊在身边，就好像你陪在我身边~</p></div>
+            <div class="story-text"><h3>💜 关于偏爱</h3><p>圣诞老人把礼物放在袜子里，而我把你送我的小熊放在这个紫色的网页里。小熊在身边，就像你陪在我身边~</p></div>
         </div>
         <div class="story-row reveal">
             <div class="story-img"><img src="9t1.jpg" alt="Story 2"></div>
@@ -283,7 +302,7 @@
     <!-- 4. Immersive -->
     <section class="immersive reveal">
         <img src="12.jpg" alt="Big Love">
-        <div class="img-overlay"><h2>🦔刺猬小姐，天天开心！</h2></div>
+        <div class="img-overlay"><h2> 刺猬小姐<br>天天开心！<br></h2></div>
     </section>
 
     <!-- 5. 贺卡 (重点修改区域) -->
@@ -306,7 +325,7 @@
                 <br>
                 <strong>圣诞快乐，崔几几！</strong>
             </p>
-            <p class="signature">Li Jiaqi</p>
+            <p class="signature">lil fdf</p>
         </div>
     </section>
 
@@ -333,4 +352,3 @@
     </script>
 </body>
 </html>
-
